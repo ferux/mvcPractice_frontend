@@ -1,0 +1,466 @@
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.header a {
+    color: rgb(60, 96, 168);
+}
+
+.center-txt {
+    text-align: center!important;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar.center{
+    text-align: center;
+}
+
+/* Navbar links */
+.navbar .item {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar.center .item {
+    float: none;
+    display: inline-block;
+}
+
+.navbar .item.active {
+    background-color: rgb(60, 96, 168);
+    font-weight: bold;
+}
+
+/* Links - change color on hover */
+.navbar .item:hover:not(.active) {
+    /* background-color: rgb(159, 174, 204); */
+    background-color: rgba(255, 255, 255, 0.20);
+    /* color: black; */
+}
+
+.addSpace {
+    padding: 5px 5px 15px 5px;
+}
+
+.column {
+    float: left;
+    text-align: center;
+    min-height: 300px;
+    padding-top: 1%;
+}
+
+.column.side {
+    width: 13%;
+    background-color: white;
+}
+
+.column.middle {
+    width: 90%;
+    padding-left: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+#dataTable {
+    table-layout: auto;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+    /* pointer-events: none; */
+    cursor: default; 
+    /* user-select: none; */
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+
+#dataTable span.reverse {
+    color: blue;
+}
+
+#dataTable span.reverse:hover {
+    color: green;
+}
+
+#dataTable td.uuid {
+    max-width: 4em;
+}
+
+#dataTable tbody tr:last-child td {
+    background-color: rgb(60, 96, 168);
+    border-top: 5px solid white;
+}
+
+#dataTable tbody tr:last-child td:first-child {
+    border-bottom-left-radius: .5em;
+}
+
+#dataTable tbody tr:last-child td:last-child {
+    border-bottom-right-radius: .5em;
+}
+
+#dataTable thead tr th {
+    height: 2em;
+    background-color: rgb(60, 96, 168);
+    color: white;
+    padding: 5px 5px 5px 5px;
+    border-bottom: 5px solid white;
+    font-size: 1.2em;
+}
+
+#dataTable thead tr th:first-child {
+    border-top-left-radius: 1.5em;
+}
+
+#dataTable thead tr th:last-child {
+    border-top-right-radius: 1.5em;
+}
+
+#dataTable tbody tr td {
+    padding: 10px 5px 10px 5px;
+    background-color: rgb(245, 245, 245);
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#dataTable tbody tr td.edit {
+    color: #e9a700;
+    -webkit-transition: all .6s linear 0s;
+    -moz-transition: all .6s linear 0s;
+    transition: all .6s linear 0s;
+}
+
+#dataTable tbody tr td.edit div {
+    -webkit-transition: all .6s linear 0s;
+    -moz-transition: all .6s linear 0s;
+    transition: all .6s linear 0s;
+    
+}
+
+#dataTable tbody tr td.edit:hover {
+    background-color: #e9a700!important;
+}
+
+#dataTable tbody tr td.edit:hover div {
+    /* animation: you_spin_me .5s linear; */
+    transform: rotateY(180deg);
+    color: white;
+}
+
+#dataTable tbody tr td.delete {
+    color: #D34646;
+    font-weight: bold;
+    -webkit-transition: all .6s linear 0s;
+    -moz-transition: all .6s linear 0s;
+    transition: all .6s linear 0s;
+}
+
+#dataTable tbody tr td.delete:hover {
+    background-color: #D34646!important;
+}
+
+#dataTable tbody tr td.delete div {
+    -webkit-transition: all .6s linear 0s;
+    -moz-transition: all .6s linear 0s;
+    transition: all .6s linear 0s;
+}
+
+#dataTable tbody tr td.delete:hover div {
+    transform: rotate(360deg);
+    color: white;
+}
+
+#dataTable tbody tr:hover:not(:last-child) td{
+    background-color: rgb(255, 255, 255);
+}
+
+#dataTable tbody tr.table-row td.highlight {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#dataTable tbody tr.table-row td.highlight.edit:hover {
+    background-color: #ffcd41;
+    
+}
+#dataTable tbody tr.table-row td.highlight.edit:hover a {
+    animation: you_spin_me .5s linear;
+    color: white;
+}
+#dataTable tbody tr.table-row td.highlight.delete:hover {
+    background-color: #D34646;
+}
+#dataTable tbody tr.table-row td.highlight.delete:hover a {
+    animation: you_spin_me .5s linear;
+    color: white;
+}
+#dataTable tbody tr.table-row:last-child td {
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid #DDDDDD;
+}
+
+div.divFloat {
+    position: relative;
+}
+
+.button-me {
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 16px 8px 16px;
+    background-color: #CCCCCC;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 0px 6px;
+    font-family: monospace;
+    border-radius: 6px;
+    margin: 0px 3px;
+    transition: all .4s linear;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.btn:disabled {
+    background-color: #9e9e9e;
+}
+
+.btn:hover:not(:disabled) {
+    box-shadow: 0 0px 16px 0 rgb(255, 255, 255), 0 0px 16px 0 rgb(255, 255, 255);
+    filter: brightness(115%);
+}
+
+.ok {
+    background-color: #50b62f;
+    color: white;
+}
+
+.cancel {
+    background-color: #b62f2f;
+    color: white;
+}
+
+.save {
+    color: #3c60a8;
+    background-color: white;
+}
+
+div.bg {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/* .floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 18px;
+    transition: 0.2s ease all;
+} */
+
+/* div.input {
+    width: 20%;
+    padding-right: 4%;
+    text-align: right;
+    display: inline-block;
+} */
+
+div.backdrop {
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 50px;
+    z-index: 1;
+    text-align: center;
+}
+
+div.backdrop>div.modal {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    width: 80%;
+    margin: 0px auto;
+    padding: 30px;
+    display: inline-block;
+}
+
+ul.input-field {
+    list-style: none;
+}
+
+ul.input-field>li {
+    background-color: rgb(60, 96, 168);
+    border-radius: 16px;
+    padding: .5em 0;
+    text-align: start;
+    margin: .5em;
+}
+
+ul.input-field>li>div {
+    display: inline-block;
+    font-size: 28px;
+    color: white;
+    margin-right: 1em;
+    width: 10%;
+    vertical-align: middle;
+    text-align: right;
+}
+
+ul.input-field>li>input {
+    min-height: 2em;
+    margin: 0px auto;
+    border: 0px;
+    padding: 0px;
+    border-radius: 8px;
+    width: 85%;
+    text-align: center;
+}
+
+.footer {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    overflow:hidden;
+    left: 0;
+    bottom: 0;
+}
+
+div.centerLocation {
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    top: 40%;
+    height: 20%;
+    text-align: center;
+    font-family: Tangerine, sans-serif, serif;
+    font-size: 148px;
+    color: rgb(94, 41, 41);
+    text-shadow: 13px 8px 14px grey;
+    animation-name: rainbowLocation; 
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    padding-left: 0%;
+}
+
+div.centerBorder {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+    font-family: Vollkorn, sans-serif, serif;
+    color: whitesmoke;
+    font-size: 72px;
+    
+}
+
+div.centerBorder div {
+    /* background-color: rgb(59, 138, 76); */
+    background: linear-gradient(300deg, #993030, #f5f858, #1d9f2e);
+    background-size: 700% 700%;
+    background-position:0% 76%;
+    display: inline-block;
+    padding: .5em;
+    border-radius: 18px;
+    white-space: nowrap;
+    transition: all 4s;
+}
+
+div.centerBorder:hover div {
+    background: linear-gradient(300deg, #993030, #f5f858, #1d9f2e);
+    background-size: 700% 700%;
+    
+    -webkit-animation: gradient-hover 5s ease-in-out infinite;
+    -moz-animation: gradient-hover 5s ease-in-out infinite;
+    animation: gradient-hover 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes gradient-hover {
+    0%{background-position:0% 76%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 76%}
+}
+
+@-moz-keyframes gradient-hover {
+    0%{background-position:0% 76%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 76%}
+}
+@keyframes gradient-hover { 
+    0%{background-position:0% 76%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 76%}
+}
+
+
+
+@keyframes rainbowLocation {
+      0% {color: rgb(94, 41, 41); left: 35%;}
+     25% {color: rgb(250, 106, 106); left:50%;}
+     50% {color: rgb(255, 241, 117); left: 35%;}
+     75% {color: rgb(112, 253, 142); left:20%;}
+    100% {color: rgb(94, 41, 41); left: 35%;}
+}
+
+@keyframes rotateBorder {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}    
+}
+
+.loader {
+    border: 12px solid #9898BB;
+    border-top: 12px solid #29296B;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    animation: you_spin_me 2s ease-in-out infinite;
+}
+
+@keyframes you_spin_me {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
